@@ -64,7 +64,7 @@
             "pages": [
               "api-reference/endpoint/create-pixqrcode",
               "api-reference/endpoint/update-pixqrcode",
-              "api-reference/endpoint/get--pixqrcode"
+              "api-reference/endpoint/get-pixqrcode"
             ]
           }
         ]
