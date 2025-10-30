@@ -3,7 +3,7 @@ title: "Criar PixQrCode"
 description: "Permite que você crie um código copia-e-cola e um QRCode Pix para seu cliente fazer o pagamento."
 type: "api"
 method: "POST"
-path: "/pix-qrcode"
+path: "/v1/pixQrCode/creatre"
 ---
 
 <ParamField path="Authorization" type="header" required>
@@ -30,4 +30,107 @@ curl --request POST \
 
 </RequestExample>
 
-/
+<ResponseExample>
+
+```json 200
+{ 
+	"txid": "42f9c9c4944c4cffb71c4942386690f1",
+	"amount": 5.0,
+	"status": "Aguardando",
+	"method": "PIX",
+	"pix_copia_e_cola": "...",
+	"pix_qr_code_image": "...",
+	"constumer": {
+		"name": "John Doe",
+		"phone": "(11) 000-0000",
+		"email": "johndoe@valorapay.cash",
+		"tax_id": "123.456.789-01"
+	},
+	"created_at": "2025-30-10T18:56:15.538Z",
+	"updated_at": "2025-30-10T18:56:15.538Z",
+	"expires_at": "2025-30-10T18:56:15.538Z"
+}
+```
+
+
+```json 401
+{
+	"name": "AUTH_MISSING_KEY",
+	"message": "Chave de API ausente. Use o header Authorization: Bearer <API_KEY>."
+}
+```
+
+</ResponseExample>
+
+### Body
+
+<ParamField path="amount" type="number" required>
+  Valor da cobrança em centavos.
+</ParamField>
+
+<ParamField path=" customer" type="object" required>
+  Os dados do seu cliente para criá-lo. O objeto de customer não é obrigatório, mas ao informar qualquer informação do `customer` todos os campos `name`, `phone`, `email` e `tax_id` são obrigatórios.
+
+  <Accordion title="Child attributes">
+    <ParamField path="customer.name" type="string" required>
+      Nome completo do seu cliente
+
+      Example: `"John Doe"`
+    </ParamField>
+    <ParamField path="customer.phone" type="string" required>
+      Celular do cliente
+
+      Example: `"(00) 0000-0000"`
+    </ParamField>
+    <ParamField path="customer.email" type="string" required>
+      Email do cliente
+
+      Example: `"johndoe@valoracash.pay"`
+    </ParamField>
+    <ParamField path="customer.tax_id" type="string" required>
+      CPF ou CNPJ do cliente
+
+      Example: `"000.000.000-00"`
+    </ParamField>
+  </Accordion>
+</ParamField>
+
+### Response
+
+<ParamField path="response" type="object">
+  QRCode Pix criado com sucesso
+
+  <Accordion title="Child attributes">
+    <ParamField path="txid" type="string">
+      Identificador único do QRCode Pix.
+    </ParamField>
+    <ParamField path="amount" type="string">
+      Valor a ser pago
+
+      <ParamField path="mathod" type="string">
+        Informação sobre o andamento do QRCode Pix.
+
+        Available options:  `Aguardando`, `Expirado`, `Cancelado`, `Paga`, `Reembolsado`
+      </ParamField>
+      <ParamField path="pix_copia_e_cola" type="string">
+        Código copia-e-cola do QRCode Pix.
+      </ParamField>
+      <ParamField path="pix_qr_code_image" type="string">
+        Imagem em Base64 do QRCode Pix.
+      </ParamField>
+      <ParamField path="created_at" type="string">
+        Data de criação do QRCode Pix.
+      </ParamField>
+      <ParamField path="updated_at" type="string">
+        Data de atualização do QRCode Pix.
+      </ParamField>
+      <ParamField path="expires_at" type="string">
+        Data de expiração do QRCode Pix.
+      </ParamField>
+    </ParamField>
+  </Accordion>
+</ParamField>
+
+<ParamField path="error" type="null">
+  
+</ParamField>
