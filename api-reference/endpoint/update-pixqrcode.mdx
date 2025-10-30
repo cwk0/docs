@@ -1,5 +1,5 @@
 ---
-title: "Update pixQrCode"
+title: "Update PixQrCode"
 description: "Atualizar informações do pagamento do QRCode Pix."
 valoraapi: "PATCH /pixQrCode/update"
 ---
@@ -25,6 +25,8 @@ curl --request POST \
 
 </RequestExample>
 
+<ResponseExample>
+
 ```json 200
 { 
 	"txid": "42f9c9c4944c4cffb71c4942386690f1",
@@ -45,11 +47,15 @@ curl --request POST \
 }
 ```
 
+
 ```json 401
 {
 	"name": "AUTH_MISSING_KEY",
 	"message": "Chave de API ausente. Use o header Authorization: Bearer <API_KEY>."
 }
+```
+
+</ResponseExample>
 
 ### Query Parameters
 
@@ -87,4 +93,3 @@ curl --request POST \
     </ParamField>
   </Accordion>
 </ParamField>
-```
