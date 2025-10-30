@@ -62,8 +62,8 @@
           {
             "group": "Endpoints",
             "pages": [
-              "api-reference/endpoint/get-pix-qrcode",
               "api-reference/endpoint/create-pix-qrcode",
+              "api-reference/endpoint/get-pix-qrcode",
               "api-reference/enpoint/update-pix-qrcode"
             ]
           }
