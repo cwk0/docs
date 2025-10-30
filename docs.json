@@ -22,27 +22,37 @@
             ]
           },
           {
-            "group": "Customization",
+            "group": "Cobrança",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "pages/payment/reference",
+              "pages/payment/create",
+              "pages/payment/list"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Pix QrCode",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "pages/pix-qrcode/reference",
+              "pages/pix-qrcode/create",
+              "pages/pix-qrcode/check",
+              "pages/pix-qrcode/update"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Bolix",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "pages/bolix/reference",
+              "pages/bolix/create",
+              "pages/bolix/check"
+            ]
+          },
+          {
+            "group": "Saques",
+            "pages": [
+              "pages/withdraw/reference",
+              "pages/withdraw/create",
+              "pages/withdraw/check",
+              "pages/pwithdraw/list"
             ]
           }
         ]

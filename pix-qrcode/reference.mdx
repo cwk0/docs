@@ -1,0 +1,62 @@
+---
+title: "Pix QrCode"
+description: "Gere um QRCode Pix e um código copia-e-cola para o seu cliente"
+---
+
+## Estrutura
+
+Uma cobrança via **QR Code Pix** é representada na **API da ValoraPay** pela seguinte estrutura:
+
+```json expandable
+{ 
+	"txid": "42f9c9c4944c4cffb71c4942386690f1",
+	"amount": 5.0,
+	"status": "Paga",
+	"method": "PIX",
+	"pix_copia_e_cola": "...",
+	"pix_qr_code_image": "...",
+	"constumer": {
+		"name": "John Doe"
+	},
+	"created_at": "2025-30-10T18:56:15.538Z",
+	"updated_at": "2025-30-10T18:56:15.538Z",
+	"expires_at": "2025-30-10T18:56:15.538Z"
+}
+```
+
+## Atributos:
+
+<AccordionGroup>
+  <Accordion title="txid:">
+    ```json expandable
+    {
+    	"txid": "42f9c9c4944c4cffb71c4942386690f1",
+    }
+    ```
+
+    `txid:` <u>string.</u>
+
+    Identificador único da cobrança.
+  </Accordion>
+  <Accordion title="amount">
+    ```json
+    {
+    ```
+
+    amount: number.
+
+    Valor da cobrança em centavos (ex: 500 = R\$ 5,00)
+  </Accordion>
+  <Accordion title="New Accordion">
+    
+  </Accordion>
+  <Accordion title="New Accordion">
+    
+  </Accordion>
+  <Accordion title="New Accordion">
+    
+  </Accordion>
+  <Accordion title="New Accordion">
+    
+  </Accordion>
+</AccordionGroup>
