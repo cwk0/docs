@@ -34,29 +34,98 @@ Uma cobrança via **QR Code Pix** é representada na **API da ValoraPay** pela s
     }
     ```
 
-    `txid:` <u>string.</u>
-
-    Identificador único da cobrança.
+    <ParamField path="id" type="string">
+      Identificador único da cobrança.
+    </ParamField>
   </Accordion>
   <Accordion title="amount">
     ```json
     {
+    	"amount": "5.0"
+    }
     ```
 
-    amount: number.
+    <ParamField path="amount" type="string">
+      Valor da cobrança
+    </ParamField>
+  </Accordion>
+  <Accordion title="status">
+    ```json
+    {
+       "status": "Aguardando"
+    }
+    ```
 
-    Valor da cobrança em centavos (ex: 500 = R\$ 5,00)
+    <ParamField path="param" type="string">
+      Informação sobre o andamento do QRCode Pix.
+
+      Available options:  `Aguardando`, `Expirado`, `Cancelado`, `Paga`, `Reembolsado`
+    </ParamField>
   </Accordion>
-  <Accordion title="New Accordion">
-    
+  <Accordion title="method">
+    ```json
+    {
+       "method": "PIX"
+    }
+    ```
+
+    <ParamField path="method" type="string">
+      Método de pagamento.
+    </ParamField>
   </Accordion>
-  <Accordion title="New Accordion">
-    
+  <Accordion title="pix_copia_e_cola">
+    ```json
+    {
+       "pix_copia_e_cola": "..."
+    }
+    ```
+
+    <ParamField path="pix_qr_code_image" type="string">
+      Código PIX (copia-e-cola) para pagamento
+    </ParamField>
   </Accordion>
-  <Accordion title="New Accordion">
-    
+  <Accordion title="pix_qr_code_image">
+    ```json
+    {
+       "pix_qr_code_image": "..."
+    }
+    ```
+
+    <ParamField path="pix_qr_code_image" type="string">
+      Código PIX no formato Base64 (útil para exibição em imagens).
+    </ParamField>
   </Accordion>
-  <Accordion title="New Accordion">
-    
+  <Accordion title="created_at">
+    ```json
+    {
+       "created_at": "2025-30-10T18:56:15.538Z"
+    }
+    ```
+
+    <ParamField path="created_at" type="string">
+      Data e hora de expiração do QRCode.
+    </ParamField>
+  </Accordion>
+  <Accordion title="updated_at">
+    ```json
+    {
+       "updated_at": "2025-30-10T18:56:15.538Z"
+    }
+    ```
+
+    <ParamField path="updated_at" type="string">
+      Data e hora de expiração do QRCode.
+    </ParamField>
+  </Accordion>
+  <Accordion title="expires_at">
+    ```json
+    {
+       "expires_at": "2025-30-10T18:56:15.538Z"
+    }
+    ```
+
+    <ParamField path="expires_at" type="string">
+      Data e hora de expiração do QRCode.
+    </ParamField>
   </Accordion>
 </AccordionGroup>
