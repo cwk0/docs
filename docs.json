@@ -61,7 +61,7 @@
         "tab": "API reference",
         "groups": [
           {
-            "group": "Pix QRCode Endpoints",
+            "group": "Endpoints",
             "pages": [
                 "api-reference/endpoint/get-pix-qrcode",
                 "api-reference/endpoint/create-pix-qrcode",
@@ -74,14 +74,9 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
+          "anchor": "Comunidade",
           "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "icon": "discord"
         }
       ]
     }
