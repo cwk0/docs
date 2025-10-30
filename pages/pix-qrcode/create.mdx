@@ -8,7 +8,7 @@ path: "/v1/pixQrCode/create"
 
 ### Authorization
 
-<ParamField path="Authorization" type="header" type="string" required>
+<ParamField path="Authorization" type="string" required>
   Cabeçalho de autenticação Bearer no formato `Bearer <api-key>` onde `<api-key>` é a sua chave de API.
 </ParamField>
 
@@ -16,7 +16,7 @@ path: "/v1/pixQrCode/create"
 
 ```bash Criar QRCode PIX
 curl --request POST \
-  --url https://pay.valorapay.cash/v1/pixQrCode/create \
+  --url https://pay.valora.cash/v1/pixQrCode/create \
   --header 'Authorization: Bearer <token>' \
   --header 'Content-Type: application/json' \
   --data '{

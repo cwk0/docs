@@ -1,0 +1,24 @@
+---
+title: "Autenticação"
+description: "Como enviar requisições para a nossa API"
+---
+
+<Tip>
+  **Chave de API**: Sua credencial de acesso à API da ValoraPay. Esta chave identifica sua conta e autoriza suas requisições. **IMPORTANTE**: Sem a chave de API, as requisições serão recusadas.
+</Tip>
+
+### **Gerenciando chaves de API**
+
+Gerencie suas chaves de API diretamente em nossa plataforma. Você pode:
+
+- Listar todas as chaves ativas
+- Criar novas chaves
+- Revogar chaves existentes
+
+<Info>
+  Todas as requisições são enviadas para o mesmo endpoint (`https://pay.valora.cash`), mas o ambiente é determinado pela chave de API utilizada:
+</Info>
+
+<Warning>
+  A API retornará o código HTTP `401` quando a chave de API não for fornecida no header ou a chave for inválida
+</Warning>
