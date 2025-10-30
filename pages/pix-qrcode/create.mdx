@@ -1,5 +1,33 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Criar PixQrCode"
+description: "Permite que você crie um código copia-e-cola e um QRCode Pix para seu cliente fazer o pagamento."
+type: "api"
+method: "POST"
+path: "/pix-qrcode"
 ---
 
+<ParamField path="Authorization" type="header" required>
+  Cabeçalho de autenticação Bearer no formato `Bearer <api-key>` onde `<api-key>` é a sua chave de API.
+</ParamField>
+
+<RequestExample>
+
+```bash Criar QRCode PIX
+curl --request POST \
+  --url https://pay.valorapay.cash/v1/pixQrCode/create \
+  --header 'Authorization: Bearer <token>' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "amount": 123,
+  "customer": {
+    "name": "John Doe",
+    "phone": "(11) 000-0000",
+    "email": "johndoe@valorapay.cash",
+    "tax_id": "123.456.789-01"
+  },
+}'
+```
+
+</RequestExample>
+
+/
