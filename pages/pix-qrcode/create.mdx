@@ -1,7 +1,7 @@
 ---
 title: "Criar PixQrCode"
 description: "Permite que você crie um código copia-e-cola e um QRCode Pix para seu cliente fazer o pagamento."
-openapi: 'POST /v1/pixQrCode/create'
+valoraapi: "POST /pixQrCode/create"
 ---
 
 ### Authorization
@@ -17,7 +17,7 @@ curl --request POST \
   --url https://pay.valora.cash/v1/pixQrCode/create \
   --header 'Authorization: Bearer <token>' \
   --header 'Content-Type: application/json' \
-  --data '{
+  --body '{
   "amount": 123,
   "customer": {
     "name": "John Doe",
@@ -65,11 +65,11 @@ curl --request POST \
 ### Body
 
 <ParamField path="amount" type="number" required>
-  Valor da cobrança em centavos.
+  Valor da cobrança.
 </ParamField>
 
 <ParamField path=" customer" type="object" required>
-  Os dados do seu cliente para criá-lo. O objeto de customer não é obrigatório, mas ao informar qualquer informação do `customer` todos os campos `name`, `phone`, `email` e `tax_id` são obrigatórios.
+  Os dados do seu cliente para criá-lo. O objeto de customer é obrigatório, mas ao informar qualquer informação do `customer` todos os campos `name`, `phone`, `email` e `tax_id` são obrigatórios.
 
   <Accordion title="Child attributes">
     <ParamField path="customer.name" type="string" required>
@@ -106,27 +106,31 @@ curl --request POST \
     </ParamField>
     <ParamField path="amount" type="string">
       Valor a ser pago
+    </ParamField>
+    <ParamField path="status" type="string">
+      Informação sobre o andamento do QRCode Pix.
 
-      <ParamField path="mathod" type="string">
-        Informação sobre o andamento do QRCode Pix.
+      Available options:  `Aguardando`, `Expirado`, `Cancelado`, `Paga`, `Reembolsado`
+    </ParamField>
+    <ParamField path="method" type="string">
+      Informação sobre o método do QRCode Pix.
 
-        Available options:  `Aguardando`, `Expirado`, `Cancelado`, `Paga`, `Reembolsado`
-      </ParamField>
-      <ParamField path="pix_copia_e_cola" type="string">
-        Código copia-e-cola do QRCode Pix.
-      </ParamField>
-      <ParamField path="pix_qr_code_image" type="string">
-        Imagem em Base64 do QRCode Pix.
-      </ParamField>
-      <ParamField path="created_at" type="string">
-        Data de criação do QRCode Pix.
-      </ParamField>
-      <ParamField path="updated_at" type="string">
-        Data de atualização do QRCode Pix.
-      </ParamField>
-      <ParamField path="expires_at" type="string">
-        Data de expiração do QRCode Pix.
-      </ParamField>
+      Available options:  `PIX`,
+    </ParamField>
+    <ParamField path="pix_copia_e_cola" type="string">
+      Código copia-e-cola do QRCode Pix.
+    </ParamField>
+    <ParamField path="pix_qr_code_image" type="string">
+      Imagem em Base64 do QRCode Pix.
+    </ParamField>
+    <ParamField path="created_at" type="string">
+      Data de criação do QRCode Pix.
+    </ParamField>
+    <ParamField path="updated_at" type="string">
+      Data de atualização do QRCode Pix.
+    </ParamField>
+    <ParamField path="expires_at" type="string">
+      Data de expiração do QRCode Pix.
     </ParamField>
   </Accordion>
 </ParamField>

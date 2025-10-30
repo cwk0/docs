@@ -1,0 +1,258 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "ValoraPay API",
+    "description": "API da ValoraPay para integração de pagamentos via PIX QR Code.",
+    "version": "1.0.0",
+    "license": {
+      "name": "MIT"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://pay.valorapay.cash/v1"
+    }
+  ],
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "paths": {
+    "/pixQrCode/create": {
+      "post": {
+        "summary": "Criar PIX QR Code",
+        "description": "Cria um novo pagamento PIX e retorna o QR Code, link de pagamento e informações do cliente.",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePixQrCodeRequest"
+              },
+              "example": {
+                "amount": 123,
+                "customer": {
+                  "name": "John Doe",
+                  "phone": "(11) 000-0000",
+                  "email": "johndoe@valorapay.cash",
+                  "tax_id": "123.456.789-01"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "PIX QR Code criado com sucesso.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreatePixQrCodeResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Erro na requisição (dados inválidos ou token ausente)."
+          },
+          "500": {
+            "description": "Erro interno no servidor."
+          }
+        }
+      }
+    },
+    "/pixQrCode/check": {
+        "get": {
+          "summary": "Consultar status do PIX QR Code",
+          "description": "Verifica o status atual de um pagamento PIX a partir do `txid`.",
+          "parameters": [
+            {
+              "name": "txid",
+              "in": "query",
+              "required": true,
+              "description": "Identificador único do pagamento PIX.",
+              "schema": {
+                "type": "string",
+                "example": "9eada7abb25f49aca5e0ca677a329650"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Status do PIX retornado com sucesso.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CreatePixQrCodeResponse"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "PIX não encontrado."
+            }
+          },
+          "security": [
+            {
+              "bearerAuth": []
+            }
+          ]
+        }
+    },
+    "/pixQrCode/update": {
+    "patch": {
+      "summary": "Atualizar informações do PIX QR Code",
+      "description": "Atualiza os dados de um PIX QR Code (como valor e informações do cliente) antes do pagamento. O campo `txid` é obrigatório.",
+      "requestBody": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/UpdatePixQrCodeRequest"
+            },
+            "example": {
+              "txid": "83106dc5928047f395b2b5d551c9b3c3",
+              "amount": 550,
+              "customer": {
+                "name": "John Doe",
+                "phone": "(11) 000-0000",
+                "email": "johndoe@valorapay.cash",
+                "tax_id": "123.456.789-01"
+              }
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "PIX atualizado com sucesso.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePixQrCodeResponse"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Erro na atualização (dados inválidos ou PIX não encontrado)."
+        }
+      },
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ]
+    }
+}
+  },
+  "components": {
+    "schemas": {
+      "Customer": {
+        "type": "object",
+        "required": ["name", "phone", "email", "tax_id"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "John Doe"
+          },
+          "phone": {
+            "type": "string",
+            "example": "(11) 000-0000"
+          },
+          "email": {
+            "type": "string",
+            "example": "johndoe@valorapay.cash"
+          },
+          "tax_id": {
+            "type": "string",
+            "example": "123.456.789-01"
+          }
+        }
+      },
+      "CreatePixQrCodeRequest": {
+        "type": "object",
+        "required": ["amount", "customer"],
+        "properties": {
+          "amount": {
+            "type": "number",
+            "example": 123
+          },
+          "customer": {
+            "$ref": "#/components/schemas/Customer"
+          }
+        }
+      },
+      "UpdatePixQrCodeRequest": {
+        "type": "object",
+        "required": ["txid"],
+        "properties": {
+          "txid": {
+            "type": "string",
+            "description": "Identificador do pagamento PIX."
+          },
+          "amount": {
+            "type": "number",
+            "description": "Novo valor (opcional)."
+          }
+        }
+      },
+      "CreatePixQrCodeResponse": {
+        "type": "object",
+        "properties": {
+          "txid": {
+            "type": "string",
+            "example": "42f9c9c4944c4cffb71c4942386690f1"
+          },
+          "amount": {
+            "type": "number",
+            "example": 5.0
+          },
+          "status": {
+            "type": "string",
+            "example": "Aguardando"
+          },
+          "method": {
+            "type": "string",
+            "example": "PIX"
+          },
+          "pix_copia_e_cola": {
+            "type": "string",
+            "example": "..."
+          },
+          "pix_qr_code_image": {
+            "type": "string",
+            "example": "..."
+          },
+          "customer": {
+            "$ref": "#/components/schemas/Customer"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "expires_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  }
+}
