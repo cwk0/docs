@@ -59,7 +59,16 @@
       },
       {
         "tab": "API reference",
-        "groups": []
+        "groups": [
+          {
+            "group": "Pix QRCode Endpoints",
+            "pages": [
+                "pix-qrcode/get-pix-qrcode",
+                "pix-qrcode/create-pix-qrcode",
+                "pix-qrcode/update-pix-qrcode"
+            ]
+          }
+        ]
       }
     ],
     "global": {
