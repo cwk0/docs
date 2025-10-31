@@ -1,11 +1,14 @@
 <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 24" width="144" height="24">
 	<defs>
-		<image  width="105" height="23" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGkAAAAXCAMAAAA/dJG5AAAAAXNSR0IB2cksfwAAAjdQTFRF////////////AAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////G8nPbQAAAL10Uk5TaIADAB1NW3VYjP9IfFXHvzCf1PMF1fIknXhOg0EIJzcVFDYjAhhADTEc/qXb4wEWr94OdPSgyKk72jWsDJLdbKT8En/A9gkyiR/hy/mq7Smz686HZmRUiirD6kQTwVa+Dx5XP+m6Jfqr4tEremBi5QqBOjRqqI8brTl2/e/wM2NRWZBDd57GR7XChLjusehdxcy3c373mVoQS9aF0zxel1P1BLRK3+ehBl9FuxnxL/gi+9C8zxGWm2dQLJTSYfy7RgAAA/hJREFUeJy9lH1QFWUUxp/jrSmyQlDKGjPSCUbJRtkaQrNRhmHUQugDicik0Aaw5OsCJooKfpBigsBF5MNQkAoo8fYBFXkby6vmDKMtDRkpDlaTNDFRJhVwO+/u3Xt3Gf2jGej8ce97zvPs+e2+590lEIigBg3hhmG4w0T0D0YryINJA87EYximP3Xi+MEb/xg90oS/cVO/M/Ec8KC+MSOZvK/cOqy2n/Q7bu/Vi6NMuuM3TPhZWU/ug/dPwN1E1GMkTeXSBdc104i69DYlHH50TluPkDSSH3Xf16msZ5yfTh0PKBf4d8444yLN/us8MJPaHYAkzyI6g9kn9TZJnkP0zVU8RF+INm5p/qkg+lyUFtjhQyYsPD6P2jgNPYbHPgkjG2beSZ/B72uNtKRNvalQep8rYdTKT++vt0my37QWxbL4MKDrcLMDS94Tdc8B/7NMeuoDPNHE6TNWLG1Y1hxJJy/EUBMm/aCSYhsR1Rh1eHBqd8Q73BQevg9aJwbqbVwM6r//REj7t4h5E7oOl146FFvNneNrMe4qk4IDDr5QwfnLNXHlSCCy8HpKL1aWqqRFR1dRMZfWsFjETRMLOTHYuJi0W92U1W8YpPQSZfsW2H3DC5iEjD1i+zKLkPK6Nr7pl0QiSH4XEWwTpZh7d4c3SvKiZt2UVZskp21TXv6Fx9O3GaTsAmRsEZs39ygEacMOZOViY76vQ4wyYTKfHCFfVkhb8vDaJuVa7ys52ZLM1yihs0nyxnVKbfsmBNoN0rzTm9eKzWOeIHmtzcnLDIhbH1ULJH/M5wwhXk0aqSAb5q1Kn13rtqdpJINNkvNTFUdhFqIPGKTE6qAfu4oyd9bbFRKKzcttj9aLLQ/2aU3/KuK7huw0jWRJ1Z6pLCW22kky2iR5/QbFsTcZ9/gYJLO1O95SvobHp5L2vYoSWr28w45bhmCJ54q5WCMl7MeOZGVO76J0pZNktElyGb0oLMuac7OMEo+u/Fgt9q1wknBg1dzbWmedBpKq8HwVF/jkO0k8nspTzrM35XsnyWjjs/dsDWcpZfw1M0r8FzLeGvkWaaS94q7FN+nhs6gqtddR5ZcuUn0caig6wKu3O8wKJ8loY9JBmwUNlba6hF+MkniFgFd2QSM1PQfk5vcpY0c99WS8He0i8VSRGtyZgz13LdVIRpskP/2reiK3mkdIwCPtwPxPXSREtKAxXCyOjOvIAWoyLrtJKMwTv5tLe+AiGWxcvOidlIiKiY+PlIAPn0RhItwkfcTbTOeMlSN8iEsWX9em4PfXtTmu1eGjSAwNXof0n8P9Ol8jfPr5SzT2pFBP3xLMOYGxJwV2ACsqHP8DqSX2UJncpa7/BUmO4Ygso9cLAAAAAElFTkSuQmCC"/>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m0 0h144v24h-144z"/>
+		</clipPath>
 	</defs>
 	<style>
 		.s0 { fill: #ffffff } 
 	</style>
-	<use id="Valorapay copy" href="#img1" x="37" y="1"/>
-	<path id="Forma 1" class="s0" d="m28.47 11.77c2.7-1.16 6.95-10.65 6.95-10.65 0 0-10.65-0.52-11.99 0.95-2.4 2.62-5.56 9.7-5.56 9.7"/>
-	<path id="Camada 2" class="s0" d="m0 1.35l11.65 20.95 11.78-0.04c0 0-2.57-5.23-5.48-10.72-2.47-4.65-4.66-10.05-6.18-10.27"/>
+	<g id="Prancheta 1" clip-path="url(#cp1)">
+		<path id="Forma 1" class="s0" d="m28.47 11.77c2.7-1.16 6.95-10.65 6.95-10.65 0 0-10.65-0.52-11.99 0.95-2.4 2.62-5.56 9.7-5.56 9.7"/>
+		<path id="Camada 2" class="s0" d="m0 1.35l11.65 20.95 11.78-0.04c0 0-2.57-5.23-5.48-10.72-2.47-4.65-4.66-10.05-6.18-10.27"/>
+	</g>
 </svg>

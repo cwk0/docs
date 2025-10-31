@@ -3,13 +3,11 @@
 		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
 			<path d="m0 0h144v24h-144z"/>
 		</clipPath>
-		<image  width="39" height="20" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAUEAYAAABe3fh1AAAAAXNSR0IB2cksfwAAA3lJREFUeJzlmEko71EUx/9mIgopczayERkXChnKRqKUSIYNJcVCUkpYUIYkpaRkIdOGkswsSHYWWJOZyCxDqHd8/3XPu/c3/Hu9et538+nfPfec+zt3OvdvsfxSRwdxbY04NGQRFBdH7O0lTk8TJyeJjY3EsDCLTUK/5mbi8DBxfl78XVdHjI7W9tfaSsT3gIGB5sbl7k5cXRX99PV9GywsED8/iTs7xPR04tub2K5HJFJPxcXE93dz/sHZWaKDg+i3tFRuX11tbFxQfr7cDybQOrNouLggnp4Sn56Ic3PEzk4iZkCV2MJC+YCSk4kfH6L94yMROyA7m1hbSzw8lMeprBT9e3gQX19FO6wcoxodFftjvH5+3wY8ceDRETEkRDsAts7Dg9j/+Jjo6CjaY4tzO704AQFETCT6b2zI7ScmRDt8uI+PdhxnZ3mcpSVmqEpcebl2AK62NrmftDS5PVaG2bNxfV30jwnmysmRj0fvu7DSeb+SEmaoSpy3t3YAroQEuZ+WFnN+IGyJ+HhiXh7x+lr0f3Mj7+/kJLefmdGOi8sR9s/PREy0VYuLouHZmbZjlby8RD/g4KDc3teXiMN8bIyIM9boJaFKHDQwINq/vBDd3EQ7XDJ3d6L9yIjCMV9x+/vaA1EJZxn/MCQEwm1q9Lbe3SWiHNreFtv1EpeSIvdbUCDaZWTI7bKyFI55OYKlaW+vPSCu0FB5YNQ92Hrwz2/T7m5iVJR2nKkpsb9e4uzsiPxWxuUB9feL7efnRF7uWKU641D4GlVRkdxPWRkxN1fezmdeT5ubYv/bW2P92tvFfrg1XVyIV1die1eXjkNV4sbHjQ0IK3NrS+7H35+Iuo63Z2YaixMRIe9vNHGRkfL+PKGg3gvlt63KiYLX1VXs5+lJ5IWiaivExMjtVlbk/rHFEhOJOOvMXg5cKj/g3p5BR3zF4VbFUjX7FDo5IQYHy+PhBaIquPEi4WXE/T0RBa+tiWto0B5/fb1BR/xDeDlSUUHUKxNQWaPCVwmP554eIhKt8ntwQExKIqI8MLtVoaAgeRy8LAz/GaBacSqFhxNTU4mxsQYD6QgDRvmge8bYKFwGvF5bXjbp6E8VwP+KamqIfMWhEDesn5o4PBmxM1AO8T8jLi+J/CWhq5+aOPwvqHeZVVXZGOCnJg5/dKrKjaamvz+m/1xfMRU9o5BnkrcAAAAASUVORK5CYII="/>
 	</defs>
 	<style>
 		.s0 { fill: #000000 } 
 	</style>
 	<g id="Prancheta 1" clip-path="url(#cp1)">
-		<use id="pay" href="#img1" x="39" y="2"/>
 		<path id="Forma 1" class="s0" d="m28.47 11.77c2.7-1.16 6.95-10.65 6.95-10.65 0 0-10.65-0.52-11.99 0.95-2.4 2.62-5.56 9.7-5.56 9.7"/>
 		<path id="Camada 2" class="s0" d="m0 1.35l11.65 20.95 11.78-0.04c0 0-2.57-5.23-5.48-10.72-2.47-4.65-4.66-10.05-6.18-10.27"/>
 	</g>
