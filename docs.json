@@ -21,14 +21,6 @@
             ]
           },
           {
-            "group": "Cobrança",
-            "pages": [
-              "pages/payment/reference",
-              "pages/payment/create",
-              "pages/payment/list"
-            ]
-          },
-          {
             "group": "Pix QrCode",
             "pages": [
               "pages/pix-qrcode/reference",
@@ -64,7 +56,7 @@
             "pages": [
               "api-reference/endpoint/create-pixqrcode",
               "api-reference/endpoint/update-pixqrcode",
-              "api-reference/endpoint/get-pixqrcode"
+              "api-reference/endpoint/check-pixqrcode"
             ]
           }
         ]
