@@ -1,5 +1,5 @@
 {
-  "openapi": "3.1.0",
+  "valoraapi": "3.1.0",
   "info": {
     "title": "ValoraPay API",
     "description": "API da ValoraPay para integração de pagamentos via PIX QR Code.",
