@@ -43,7 +43,7 @@
               "pages/withdraw/reference",
               "pages/withdraw/create",
               "pages/withdraw/check",
-              "pages/pwithdraw/list"
+              "pages/withdraw/list"
             ]
           }
         ]
