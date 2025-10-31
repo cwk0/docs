@@ -56,7 +56,12 @@
             "pages": [
               "api-reference/endpoint/create-pixqrcode",
               "api-reference/endpoint/update-pixqrcode",
-              "api-reference/endpoint/check-pixqrcode"
+              "api-reference/endpoint/check-pixqrcode",
+              "api-reference/endpoint/create-bolix",
+              "api-reference/endpoint/check-bolix",
+              "api-reference/endpoint/create-withdraw",
+              "api-reference/endpoint/check-withdraw",
+              "api-reference/endpoint/list-withdraw"
             ]
           }
         ]
