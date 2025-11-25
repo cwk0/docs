@@ -15,7 +15,6 @@ Uma cobrança via **QR Code Pix** é representada na **API da ValoraPay** pela s
 	"status": "Paga",
 	"method": "PIX",
 	"pix_copia_e_cola": "...",
-	"pix_qr_code_image": "...",
 	"constumer": {
 		"name": "John Doe"
 	},
@@ -85,17 +84,6 @@ Uma cobrança via **QR Code Pix** é representada na **API da ValoraPay** pela s
       Código PIX (copia-e-cola) para pagamento
     </ParamField>
   </Accordion>
-  <Accordion title="pix_qr_code_image">
-    ```json
-    {
-       "pix_qr_code_image": "..."
-    }
-    ```
-
-    <ParamField path="pix_qr_code_image" type="string">
-      Código PIX no formato Base64 (útil para exibição em imagens).
-    </ParamField>
-  </Accordion>
   <Accordion title="created_at">
     ```json
     {
@@ -118,10 +106,10 @@ Uma cobrança via **QR Code Pix** é representada na **API da ValoraPay** pela s
       Data e hora de expiração do QRCode.
     </ParamField>
   </Accordion>
-  <Accordion title="expires_at">
+  <Accordion title="expired_at">
     ```json
     {
-       "expires_at": "2025-30-10T18:56:15.538Z"
+       "expired_at": "2025-30-10T18:56:15.538Z"
     }
     ```
 

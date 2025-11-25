@@ -13,24 +13,21 @@ api: "GET /pixQrCode/check"
 <RequestExample>
 
 ```bash Criar QRCode PIX
-curl --request POST \
-  --url https://pay.valora.cash/v1/pixQrCode/check \
-  --header 'Authorization: Bearer <token>' \
-  --header 'Content-Type: application/json' \
-  --body '{
-  "txid": "83106dc5928047f395b2b5d551c9b3c3"
-}'
+curl --request GET \
+  --url "https://pay.valora.cash/v1/pixQrCode/check?txid=<txid>" \
+  --header "Authorization: Bearer <token>"
 ```
 
 </RequestExample>
 
 <ResponseExample>
+
 ```json 200
 { 
 	"status": "Paga",
 	"created_at": "2025-30-10T18:56:15.538Z",
 	"updated_at": "2025-30-10T18:56:15.538Z",
-	"expires_at": "2025-30-10T18:56:15.538Z"
+	"expired_at": "2025-30-10T18:56:15.538Z"
 }
 ```
 
@@ -41,6 +38,7 @@ curl --request POST \
 	"message": "Chave de API ausente. Use o header Authorization: Bearer <API_KEY>."
 }
 ```
+
 </ResponseExample>
 
 ### Query Parameters
@@ -72,7 +70,7 @@ curl --request POST \
     <ParamField path="updated_at" type="string">
       Data de atualização do QRCode Pix.
     </ParamField>
-    <ParamField path="expires_at" type="string">
+    <ParamField path="expired_at" type="string">
       Data de expiração do QRCode Pix.
     </ParamField>
   </Accordion>
