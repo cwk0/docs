@@ -27,15 +27,6 @@
               "pages/pix-qrcode/create",
               "pages/pix-qrcode/check"
             ]
-          },
-          {
-            "group": "Saques",
-            "pages": [
-              "pages/withdraw/reference",
-              "pages/withdraw/create",
-              "pages/withdraw/check",
-              "pages/withdraw/list"
-            ]
           }
         ]
       },

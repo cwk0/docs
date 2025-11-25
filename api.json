@@ -105,52 +105,6 @@
           ]
         }
     },
-    "/pixQrCode/update": {
-    "patch": {
-      "summary": "Atualizar informações do PIX QR Code",
-      "description": "Atualiza os dados de um PIX QR Code (como valor e informações do cliente) antes do pagamento. O campo `txid` é obrigatório.",
-      "requestBody": {
-        "required": true,
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/UpdatePixQrCodeRequest"
-            },
-            "example": {
-              "txid": "83106dc5928047f395b2b5d551c9b3c3",
-              "amount": 550,
-              "customer": {
-                "name": "John Doe",
-                "phone": "(11) 000-0000",
-                "email": "johndoe@valorapay.cash",
-                "tax_id": "123.456.789-01"
-              }
-            }
-          }
-        }
-      },
-      "responses": {
-        "200": {
-          "description": "PIX atualizado com sucesso.",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreatePixQrCodeResponse"
-              }
-            }
-          }
-        },
-        "400": {
-          "description": "Erro na atualização (dados inválidos ou PIX não encontrado)."
-        }
-      },
-      "security": [
-        {
-          "bearerAuth": []
-        }
-      ]
-    }
-}
   },
   "components": {
     "schemas": {
