@@ -25,16 +25,7 @@
             "pages": [
               "pages/pix-qrcode/reference",
               "pages/pix-qrcode/create",
-              "pages/pix-qrcode/update",
               "pages/pix-qrcode/check"
-            ]
-          },
-          {
-            "group": "Bolix",
-            "pages": [
-              "pages/bolix/reference",
-              "pages/bolix/create",
-              "pages/bolix/check"
             ]
           },
           {
@@ -55,10 +46,7 @@
             "group": "Endpoints",
             "pages": [
               "api-reference/endpoint/create-pixqrcode",
-              "api-reference/endpoint/update-pixqrcode",
               "api-reference/endpoint/check-pixqrcode",
-              "api-reference/endpoint/create-bolix",
-              "api-reference/endpoint/check-bolix",
               "api-reference/endpoint/create-withdraw",
               "api-reference/endpoint/check-withdraw",
               "api-reference/endpoint/list-withdraw"
