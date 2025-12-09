@@ -7,12 +7,12 @@ api: "POST /pixQrCode/create"
 ### Authorization
 
 <ParamField path="Authorization" type="string" required>
-  Cabeçalho de autenticação Bearer no formato `Bearer <api-key>` onde `<api-key>` é a sua chave de API.
+  Cabeçalho de autenticação Bearer no formato `Bearer <api-key>` onde `<api-key>` é a sua chave de API. 
 </ParamField>
 
 <RequestExample>
 
-```bash Criar QRCode PIX
+```bash Criar QRCode PIX - Curl
 curl --request POST \
   --url https://pay.valora.cash/v1/pixQrCode/create \
   --header 'Authorization: Bearer <token>' \
@@ -26,6 +26,62 @@ curl --request POST \
     "tax_id": "123.456.789-01"
   },
 }'
+```
+
+
+```typescript Criar QRCode PIX - TypeScript
+import axios from "axios";
+
+async function CreatePix() {
+
+    /** @params ApiKey Chave da sua API */
+    const ApiKey = "YOUR_API_KEY";
+
+    const Response = await axios.post(
+        "https://pay.valora.cash/api/v1/pixQrCode/create",
+        {
+            amount: 19.90,
+            customer: {
+                name: "Maria Oliveira",
+                tax_id: "98765432100"
+            }
+        },
+        {
+            headers: {
+                Authorization: `Bearer ${ApiKey}`,
+                "Content-Type": "application/json"
+            }
+        }
+    );
+
+    console.log(Response.data);
+}
+
+CreatePix();
+```
+
+
+```javascript Criar QRCode PIX - JavaScript
+/** @params ApiKey Chave da sua API */
+const ApiKey = "SUA_API_KEY";
+
+const Response = await fetch("https://pay.valora.cash/api/v1/pixQrCode/create", {
+    method: "POST",
+    headers: {
+        Authorization: `Bearer ${ApiKey}`,
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        amount: 50.00,
+        customer: {
+            name: "Carlos Souza",
+            tax_id: "11122233344"
+        }
+    })
+});
+
+const Data = await Response.json();
+console.log(Data);
 ```
 
 </RequestExample>
