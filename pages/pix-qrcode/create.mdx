@@ -7,12 +7,12 @@ api: "POST /pixQrCode/create"
 ### Authorization
 
 <ParamField path="Authorization" type="string" required>
-  Cabeçalho de autenticação Bearer no formato `Bearer <api-key>` onde `<api-key>` é a sua chave de API. 
+  Cabeçalho de autenticação Bearer no formato `Bearer <api-key>` onde `<api-key>` é a sua chave de API.
 </ParamField>
 
 <RequestExample>
 
-```bash Criar QRCode PIX - Curl
+```bash Curl
 curl --request POST \
   --url https://pay.valora.cash/v1/pixQrCode/create \
   --header 'Authorization: Bearer <token>' \
@@ -29,7 +29,7 @@ curl --request POST \
 ```
 
 
-```typescript Criar QRCode PIX - TypeScript
+```typescript TypeScript
 import axios from "axios";
 
 async function CreatePix() {
@@ -61,7 +61,7 @@ CreatePix();
 ```
 
 
-```javascript Criar QRCode PIX - JavaScript
+```javascript JavaScript
 /** @params ApiKey Chave da sua API */
 const ApiKey = "SUA_API_KEY";
 
